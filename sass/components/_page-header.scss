@@ -1,0 +1,82 @@
+.header {
+    // Animation effect for 'header' while scrolling
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    // Decor
+    border-bottom: 1px solid #ececec;
+    background-color: var(--maine-background-color);
+}
+
+// General geometry header options
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+// Site navigation
+// Было -> 'contacts-head-list' - стало -> 'header-contacts'
+// Было -> 'contacts-head-link' - стало ->'header-contacts__link'
+.page-nav,
+.nav-list,
+.header-contacts,
+.header-contacts__link {
+    // Geometry
+    display: flex;
+    align-items: center;
+}
+
+// Было -> '.nav-list-itm' - стало -> '.nav-list__itm'
+.nav-list__itm:not(:last-child) {
+    // Geometry
+    margin-right: 50px;
+}
+
+// Было -> 'site-nav-link' - стало -> '.nav-list__link'
+.nav-list__link {
+    // Geometry
+    display: block;
+    padding: 32px 0;
+
+    // Text
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--secondary-text-color);
+
+    // Animation execution options
+    transition: color 250ms var(--timing-function);
+}
+
+// Было -> 'contacts-head-itm' - стало -> 'header-contacts__item'
+.header-contacts__item:not(:last-child) {
+    // Geometry
+    margin-right: 30px;
+}
+
+.header-contacts__link {
+    // Text
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--maine-text-color);
+
+    // for SVG icon with id: 'icon-envelope' & 'icon-smartphone'
+    fill: currentColor;
+
+    // Animation execution options
+    transition: color 250ms var(--timing-function);
+}
+
+// Было -> 'contacts-head-text' - стало ->'header-contacts__text'
+.header-contacts__text {
+    // Geometry
+    display: inline-block;
+    margin-left: 10px;
+}

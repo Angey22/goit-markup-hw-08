@@ -1,0 +1,294 @@
+// Styles for the "Hero" section
+.hero {
+    // Geomeetry
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+    max-height: 600px;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    // Decor
+    background-color: #c4c4c4;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero_background_image_o.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+// Было -> 'container-vert-padding-none' - стало -> 'hero__container'
+.hero__container {
+    // Geometry
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+// Было -> 'hero-title' - стало -> 'hero__title'
+.hero__title {
+    // Geometry
+    margin-bottom: 30px;
+
+    // Text
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--complementary-text-color);
+}
+
+// Было -> 'herro-button' - стало -> 'herro__button'
+.herro__button {
+    // Geometry
+    display: inline-block;
+    border: none;
+    padding: 10px 32px;
+    min-width: 216px;
+    min-height: 50px;
+
+    // Decor
+    background: var(--accent-text-color);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    // Text
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--complementary-text-color);
+    
+    // Interactivity settings
+    cursor: pointer;
+
+    // Animation execution options
+    transition: background-color 250ms var(--timing-function);
+
+        // Hover & Focus effects
+        &:hover, &:focus {
+            background-color: #188ce8;
+        }
+}
+
+// General styles of typical elements of the rest of the page sections
+.section-title {
+    // Geometry
+    margin-bottom: 50px;
+
+    // Text
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    color: var(--secondary-text-color);
+}
+
+// Styles for the "Peculiarities" section
+// Было -> 'conteainer-peculiarities' - стало -> 'peculiarities__conteainer'
+.peculiarities__conteainer {
+    padding-bottom: 47px;
+}
+
+.peculiarities-list {
+    // Geometry
+    display: flex;
+}
+
+// Было -> 'peculiarities-list-itm' - стало -> 'peculiarities-list__item'
+.peculiarities-list__item {
+    // Item Geometry
+    max-width: 270px;
+
+        // Distance between items
+        &:not(:last-child) {
+            // Geometry
+            margin-right: 30px;
+        }
+}
+
+// Decorative background & location setting of icons with id: 'icon-antenna'; 'icon-clock'; 'icon-diagram'; 'icon-astronaut'
+// Было -> 'peculiarities-list-decor' - стало -> 'peculiarities-list__decor'
+.peculiarities-list__decor {
+    // Background geometry
+    display: flex;
+    height: 120px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+
+    // Icons location setting
+    justify-content: center;
+    align-items: center;
+
+    // Background color
+    background-color: var(--secondary-background-color);
+}
+
+// Было -> 'peculiarities-list-title' - стало -> 'peculiarities-list__title'
+.peculiarities-list__title {
+    // Geometry
+    margin-bottom: 10px;
+
+    // Text
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+}
+
+// Было -> 'peculiarities-list-text' - стало -> 'peculiarities-list__text'
+.peculiarities-list__text {
+    // Text
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+// Styles for the "Work" section
+// Было -> 'work-container' - стало -> 'work__container'
+.work__container {
+    padding-top: 47px;
+}
+
+.work-list {
+    // Geometry
+    display: flex;
+    justify-content: center;
+    
+    // Distance between items of 'work-list'
+    gap: 30px;
+
+        // Было -> 'work-list-itm' - стало -> 'work-list__itm'
+        &__itm {
+        // Position
+        position: relative;
+        }
+        
+        // Было -> 'work-list-label' - стало -> 'work-list__label'
+        &__label {
+            // Position
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+        
+            // Geometry
+            padding: 27px 0;
+        
+            // Decor
+            background: rgba(47, 48, 58, 0.8);
+        }
+
+        // Было -> 'work-list-label-litle' - стало -> 'work-list__title'
+        &__title {
+            // Text
+            font-weight: 700;
+            font-size: 14px;
+            line-height: calc(16 / 14);
+            text-align: center;
+            text-transform: uppercase;
+            color: var(--complementary-text-color);
+        }
+}
+
+// Styles for the "Our Team" section
+// Section style modifier
+// Было -> 'section--highlighted' - стало -> 'section--highlighted'
+.section--highlighted {
+    //  Decor
+    background-color: var(--secondary-background-color);
+}
+
+.team-list {
+    // Geometry
+    display: flex;
+    justify-content: center;
+
+        // Было ->'team-list-item' - стало ->'team-list__item'
+        &__item {
+            // Geometry
+            padding-bottom: 30px;
+            
+            // Text
+            text-align: center;
+            
+            // Decor
+            background: var(--complementary-text-color);
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+            border-radius: 0px 0px 4px 4px;
+        
+            // Distance between items
+            &:not(:last-child) {
+                // Geometry
+                margin-right: 30px;
+            }        
+        }
+
+        // Было ->'team-list-img' - стало ->'team-list__img'
+        &__img {
+            // Geometry
+            margin-bottom: 30px;
+        }
+
+        // Было ->'team-name' - стало ->'team-list__name'
+        &__name {
+            // Geometry
+            margin-bottom: 10px;
+            
+            // Text
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.2;
+            color: var(--secondary-text-color);
+        }
+
+        // Было ->'team-position' - стало ->'team-list__position'
+        &__position {
+            // Geometry
+            margin-bottom: 16px;
+            
+            // Text
+            font-size: 16px;
+            line-height: 1.2;
+        }
+}
+
+// Styles for the "Regular Clients" section
+.client-list {
+    // Geometry
+    display: flex;
+        
+        // Distance between items
+        // Было ->'client-list-item' - стало ->'client-list__item'
+        &__item:not(:last-child) {
+            // Geometry
+            margin-right: 30px;
+        }
+
+        // Было ->'client-list-link' - стало ->'client-list__link'
+        &__link {
+            // Icons location setting
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            // Decor-color general setting
+            color: #afb1b8;
+        
+            // Link geometry
+            width: 170px;
+            height: 92px;
+            border: 1px solid currentColor;
+            border-radius: 4px;
+        
+            // for SVG icon with id: 'icon-client_logo_1'...'icon-client_logo_6'
+            fill: currentColor;
+        
+            // Animation execution options
+            transition: color 250ms var(--timing-function);
+        }
+}

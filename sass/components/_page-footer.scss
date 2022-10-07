@@ -1,0 +1,150 @@
+.footer {
+    // Geometry
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    // Decor
+    background-color: var(--complementary-background-color);
+}
+
+// Было -> 'footer-container' - стало ->'footer__container'
+.footer__container {
+    // Geometry
+    display: flex;
+    align-items: flex-start;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+// Styles for the First footer content block - 'footer-contact-block'
+// Было -> 'footer-start' - стало ->'footer-contact-block'
+.footer-contact-block {
+    // Geometry
+    margin-right: 70px;
+}
+
+// Было -> 'footer-list' - стало -> 'footer-contacts'
+.footer-contacts {
+    // Geometry
+    display: flex;
+    flex-direction: column;
+}
+
+// Было -> 'footer-list-item' - стало -> 'footer-contacts__item'
+.footer-contacts__item:not(:last-child) {
+    // Geometry
+    margin-bottom: 9px;
+}
+
+// Было -> 'contacts-foot' - стало -> 'footer-contacts__link'
+.footer-contacts__link {
+    // Text
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--individual-text-color);
+    
+    // Animation execution options
+    transition: color 250ms var(--timing-function);
+}
+
+// Было -> 'contacts-map' - стало -> 'footer-contacts__link--map'
+.footer-contacts__link--map {
+    // Text
+    color: var(--complementary-text-color);
+}
+
+// Styles for the Second footer content block -  'footer-social-block'
+.footer-social-block {
+    padding-top: 12px;
+    margin-right: 93px;
+}
+
+.social-list-title,
+.subscription-title {
+    // Geometry
+    margin-bottom: 20px;
+
+    // Text
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--complementary-text-color);
+}
+
+// Styles for the Third footer content block -  'footer-social-block'
+.footer-subscription-block {
+    // Geometry
+    padding-top: 12px;
+}
+
+.subscription-form {
+    // Geometry
+    display: flex;
+    align-items: center;
+}
+
+.subscription-input {
+    // Geometry
+    width: 358px;
+    margin-right: 12px;
+    padding: 15px 16px;
+
+    // Text
+    color: rgba(255, 255, 255, 0.6);
+
+    // Decor
+    background-color: #2f303a;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+        // Placeholder setting
+        &::placeholder {
+            // Text
+            font-size: 16px;
+            line-height: 1, 25;
+            color: rgba(255, 255, 255, 0.6);
+        }
+}
+
+.subscription-btn {
+    // Geometry
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+
+    // Decor
+    border: none;
+    border-radius: 4px;
+    background-color: #2196f3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    // Cursor effect
+    cursor: pointer;
+
+    // Animation execution options
+    transition: background-color 250ms var(--timing-function);
+
+        // Hover & Focus effects
+        &:hover, &:focus {
+            background-color: #188ce8;
+        }
+}
+
+// Было -> 'subscription-btn-text' - стало -> 'subscription-btn__text'
+.subscription-btn__text {
+    // Geometry
+    display: block;
+    margin-right: 10px;
+    
+    // Text
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    color: var(--complementary-text-color);
+}
