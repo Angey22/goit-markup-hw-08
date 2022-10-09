@@ -21,38 +21,3 @@
     clip-path: inset(50%);
     margin: -1px;
 }
-
-// Geometri settings of the ".container" auxiliary class, intended for centering and limiting the content of site elements in width.
-.container {
-    // Geometry
-    max-width: 1200px;
-    padding: 94px 15px 94px 15px;
-    margin: 0 auto 0 auto;
-}
-
-// Utility class for simulating the display of the current position on site in the site menu
-.current-position {
-    // Position
-    position: relative;
-
-    // Decor
-    color: var(--accent-text-color);
-
-        // Decorative line - current page indicator
-        &::after {
-            // Position
-            position: absolute;
-            left: 0;
-            bottom: 0;
-
-            // Geometry
-            content: '';
-            display: block;
-            width: 100%;
-            height: 4px;
-    
-            // Decor
-            background-color: var(--accent-text-color);
-            border-radius: 2px;
-        }
-}

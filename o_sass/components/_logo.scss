@@ -1,18 +1,13 @@
 // Website logo
 .logo {
     // Geometri
-    display: block;
+    display: inline-block;
 
     // Text
     font-family: $fontLogo;
-    font-size: 24px;
+    font-size: 26px;
     line-height: 1.2;
     color: var(--accent-text-color);
-    // Changing the Text style by Breakpoint
-    @media screen and (min-width: $desktop) {
-        font-size: 26px;
-        line-height: 1.2;
-    }
     
     // Decor
     text-decoration: none;
@@ -29,18 +24,9 @@
 }
 
 .header__logo {
-
-    // Changing geometri by Breakpoint
-    @media screen and (min-width: $desktop) {
-        margin-right: 93px;
-    }
-   
+    margin-right: 93px;
 }
 
 .footer__logo {
-
-    // Changing geometri by Breakpoint
-    @media screen and (min-width: $desktop) {
-        margin-bottom: 20px;
-    }
+    margin-bottom: 20px;
 }

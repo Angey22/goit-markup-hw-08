@@ -25,20 +25,7 @@
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-// SASS variables for Fonts
+// SASS variables for fonts
 $fontFamily: 'Roboto', sans-serif;
 $fontLogo: 'Raleway', sans-serif;
-
-// SASS Variables for Adaptive Breakpoints
-// For mobile
-$preMobile: 479px;
-$mobile: 480px;
-
-// For tablet
-$preTablet: 767px;
-$tablet: 768px;
-
-// For desktop
-$preDesktop: 1199px;
-$desktop: 1200px;
 
