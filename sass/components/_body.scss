@@ -5,3 +5,8 @@ body {
     font-family: $fontFamily;
     letter-spacing: 0.03em;
 }
+
+//Helper class for JavaScript code in 'modal.js' & 'mobile-menu.js' files - for stop scrolling page, when Modal-Window or Mobile-Menu open.
+.no-scroll {
+    overflow: hidden;
+}

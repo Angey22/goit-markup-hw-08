@@ -8,14 +8,15 @@
     font-size: 24px;
     line-height: 1.2;
     color: var(--accent-text-color);
-    // Changing the Text style by Breakpoint
-    @media screen and (min-width: $desktop) {
-        font-size: 26px;
-        line-height: 1.2;
-    }
     
     // Decor
     text-decoration: none;
+
+    // Changing style by Breakpoint (1200px)
+    @media screen and (min-width: $desktop) {
+        font-size: 26px;
+        line-height: 1.2;
+    }    
 }
 
 // Было -> 'logo-second-half-head' - стало ->'logo__text-header'

@@ -4,7 +4,7 @@
     margin: 0 auto 0 auto;
     padding: 0 15px 0 15px;
 
-    outline: 1px solid tomato;
+    // outline: 1px solid tomato;
 
     // Установка первого "брейк-поинта" (480px), до которого - "Отзывчивая - тянется как 'резиновая' (responsive) веб-страница", и после достижения которой - фиксируется размер страницы.
     @media screen and (min-width: $mobile) {
