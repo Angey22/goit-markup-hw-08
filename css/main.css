@@ -23,6 +23,7 @@ img {
   --secondary-text-color: #212121;
   --complementary-text-color: #fff;
   --accent-text-color: #2196f3;
+  --extra-accent-text-color: #277cc2;
   --individual-text-color: rgba(255, 255, 255, 0.6);
   --logo-dicor-color: #000;
   --portfolio-card-border-color: #eeeeee;
@@ -273,7 +274,11 @@ body {
   color: var(--secondary-text-color);
 }
 .mobile-menu__link--active {
+  text-decoration: none;
   color: var(--accent-text-color);
+}
+.mobile-menu__link--active:hover, .mobile-menu__link--active:focus {
+  color: var(--extra-accent-text-color);
 }
 
 .mobile-contacts {
@@ -291,7 +296,7 @@ body {
   color: var(--accent-text-color);
 }
 .mobile-contacts__tel:hover, .mobile-contacts__tel:focus {
-  color: #277cc2;
+  color: var(--extra-accent-text-color);
 }
 .mobile-contacts__mail {
   font-weight: 500;
@@ -322,5 +327,5 @@ body {
   color: var(--accent-text-color);
 }
 .mobile-social__link:hover, .mobile-social__link:focus {
-  color: #277cc2;
+  color: var(--extra-accent-text-color);
 }/*# sourceMappingURL=main.css.map */

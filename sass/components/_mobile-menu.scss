@@ -86,7 +86,13 @@
     // Utility class for simulating the display of the current position on site in the mobile site menu
     &--active {
       // Decor
+      text-decoration: none;
       color: var(--accent-text-color);
+
+      // Hover & Focus effects
+        &:hover, &:focus {
+          color: var(--extra-accent-text-color);
+        }
     }
   }
 }
@@ -115,7 +121,7 @@
 
         // Hover & Focus effects
           &:hover, &:focus {
-            color: #277cc2;
+            color: var(--extra-accent-text-color);
           }
     }
 
@@ -156,7 +162,7 @@
     
           // Hover & Focus effects
           &:hover, &:focus {
-            color: #277cc2;
+            color: var(--extra-accent-text-color);
           }
     }
 }
