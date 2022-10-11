@@ -38,7 +38,7 @@ img {
   color: var(--accent-text-color);
 }
 
-.visually-hidden {
+.visually-hidden, .form__checkbox-input {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -328,4 +328,288 @@ body {
 }
 .mobile-social__link:hover, .mobile-social__link:focus {
   color: var(--extra-accent-text-color);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  overflow-y: scroll;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  -webkit-transition: opacity 250ms var(--timing-function);
+  transition: opacity 250ms var(--timing-function);
+}
+@media screen and (max-width: 480px) {
+  .backdrop {
+    padding: 93px 15px;
+  }
+}
+.backdrop.is-hidden {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+  transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+}
+.backdrop.is-hidden .modal-window {
+  -webkit-transform: translate(-50%, -50%) scale(0.8);
+          transform: translate(-50%, -50%) scale(0.8);
+}
+
+.modal-window {
+  position: relative;
+  border-radius: 4px;
+  padding: 40px;
+  background-color: var(--maine-background-color);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: scale 350ms var(--timing-function), -webkit-transform 350ms var(--timing-function);
+  transition: scale 350ms var(--timing-function), -webkit-transform 350ms var(--timing-function);
+  transition: transform 350ms var(--timing-function), scale 350ms var(--timing-function);
+  transition: transform 350ms var(--timing-function), scale 350ms var(--timing-function), -webkit-transform 350ms var(--timing-function);
+}
+@media screen and (min-width: 480px) {
+  .modal-window {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%) scale(1);
+            transform: translateX(-50%) scale(1);
+    width: 450px;
+  }
+}
+@media screen and (min-width: 480px) and (min-height: 610px) {
+  .modal-window {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-window {
+    width: 528px;
+  }
+}
+.modal-window__close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: var(--maine-background-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #000;
+  cursor: pointer;
+  fill: currentColor;
+  -webkit-transition: color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
+}
+.modal-window__title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .modal-window__title {
+    font-size: 20px;
+    line-height: 1.15;
+  }
+}
+
+.form__field {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.form__field:not(:first-child) {
+  margin-top: 10px;
+}
+.form__label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+.form__input {
+  width: 100%;
+  margin: 0;
+  padding: 12px 15px 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.2;
+  -webkit-transition: border 250ms var(--timing-function);
+  transition: border 250ms var(--timing-function);
+}
+.form__input:focus {
+  outline: 0;
+  border: 1px solid var(--accent-text-color);
+}
+.form__input:focus ~ .form__icon {
+  color: #2196f3;
+}
+.form__input--multiple-lines {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+}
+.form__input--multiple-lines::-webkit-input-placeholder {
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.form__input--multiple-lines::-moz-placeholder {
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.form__input--multiple-lines:-ms-input-placeholder {
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.form__input--multiple-lines::-ms-input-placeholder {
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.form__input--multiple-lines::placeholder {
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.form__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  width: 20px;
+  height: 20px;
+  color: #212121;
+  fill: currentColor;
+  -webkit-transition: color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
+}
+.form__checkbox-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+@media screen and (min-width: 480px) {
+  .form__checkbox-field {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .form__checkbox-field {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+.form__checkbox-label {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.form__checkbox-input:focus ~ .form__checkbox-icon {
+  outline: 3px solid #000;
+  border-color: var(--accent-text-color);
+}
+.form__checkbox-input:checked ~ .form__checkbox-icon {
+  border: 2px solid var(--accent-text-color);
+  background-color: var(--accent-text-color);
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m1.957 4.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z' fill='%23fff' stroke='%23fff' stroke-width='.2'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.form__checkbox-icon {
+  display: block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+}
+.form__checkbox-text {
+  display: block;
+}
+.form__checkbox-link {
+  display: block;
+  color: var(--accent-text-color);
+  -webkit-transition: color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
+}
+.form__checkbox-link:hover, .form__checkbox-link:focus {
+  color: #2077be;
+}
+@media screen and (max-width: 479px) {
+  .form__checkbox-link {
+    display: none;
+  }
+}
+.form__checkbox-link--mobile {
+  display: block;
+  text-align: center;
+  margin: 8px auto 20px auto;
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--accent-text-color);
+}
+@media screen and (min-width: 480px) {
+  .form__checkbox-link--mobile {
+    display: none;
+  }
+}
+.form__btn {
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: var(--complementary-text-color);
+  border: none;
+  border-radius: 4px;
+  background-color: #2196f3;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  -webkit-transition: background-color 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
+}
+.form__btn:hover, .form__btn:focus {
+  background-color: #188ce8;
 }/*# sourceMappingURL=main.css.map */
