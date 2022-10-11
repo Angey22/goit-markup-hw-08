@@ -137,12 +137,13 @@
 
 // Mobile social
 .mobile-social {
+  // Geometry
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
 
     &__item:not(:last-child) {
       // Geometry
-      margin-right: 10px;
       padding-right: 10px;
 
       // Decor

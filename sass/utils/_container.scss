@@ -6,19 +6,19 @@
 
     // outline: 1px solid tomato;
 
-    // Установка первого "брейк-поинта" (480px), до которого - "Отзывчивая - тянется как 'резиновая' (responsive) веб-страница", и после достижения которой - фиксируется размер страницы.
+    // Changing geometry by Breakpoint (480px)
     @media screen and (min-width: $mobile) {
         // Breakpoint geometry
         width: 480px;
     }
 
-    // Установка второго "брейк-поинта"(768px)
+    // Changing geometry by Breakpoint (768px)
     @media screen and (min-width: $tablet) {
         // Breakpoint geometry
         width: 768px;
     }
 
-    // Установка третьего "брейк-поинта"(1200px)
+    // Changing geometry by Breakpoint (1200px)
     @media screen and (min-width: $desktop) {
         // Breakpoint geometry
         width: 1200px;

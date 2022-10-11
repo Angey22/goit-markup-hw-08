@@ -19,12 +19,10 @@
     }    
 }
 
-// Было -> 'logo-second-half-head' - стало ->'logo__text-header'
 .logo__text-header {
     color: var(--logo-dicor-color);
 }
 
-// Было -> 'logo-second-half-foot' - стало ->'logo__text-footer'
 .logo__text-footer {
     color: var(--complementary-text-color);
 }
