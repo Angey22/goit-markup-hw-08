@@ -15,20 +15,23 @@
     align-items: center;
     justify-content: space-between;
 
-    // Changing geometry by Breakpoint (480px)
-    @media screen and (max-width: $mobile) {
-        // Geometry
+    // Changing geometry by Breakpoint (767px)
+    @media screen and (max-width: $preTablet) {
+        // Geometry 
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+
+    // Changing geometry by Breakpoint (768px)
+    @media screen and (min-width: $tablet) {
+        // Geometry 
+        justify-content: flex-start;
     }
 }
 
 // Site navigation
-// Было -> 'contacts-head-list' - стало -> 'header-contacts'
-// Было -> 'contacts-head-link' - стало ->'header-contacts__link'
 .page-nav,
 .nav-list,
-.header-contacts,
 .header-contacts__link {
     // Geometry
     display: flex;
@@ -40,13 +43,21 @@
     }
 }
 
-// Было -> '.nav-list-itm' - стало -> '.nav-list__itm'
+.nav-list {
+    // Geometry
+    margin-right: 90px;
+
+    // Changing geometry by Breakpoint (1200px)
+    @media screen and (min-width: $desktop) {
+        margin-right: 312px;
+    }
+}
+
 .nav-list__itm:not(:last-child) {
     // Geometry
     margin-right: 50px;
 }
 
-// Было -> 'site-nav-link' - стало -> '.nav-list__link'
 .nav-list__link {
     // Geometry
     display: block;
@@ -54,19 +65,46 @@
 
     // Text
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--secondary-text-color);
+
+    // Changing text size by Breakpoint (1200px)
+    @media screen and (min-width: $desktop) {
+        font-size: 14px;
+    }
 
     // Animation execution options
     transition: color 250ms var(--timing-function);
 }
 
-// Было -> 'contacts-head-itm' - стало -> 'header-contacts__item'
+.header-contacts {
+    // Changing visibility by Breakpoint (767px)
+    @media screen and (max-width: $preTablet) {
+            display: none;
+    }
+
+    // Changing geometry by Breakpoint (1200px)
+    @media screen and (min-width: $desktop) {
+        // Geometry
+        display: flex;
+        align-items: center;
+    }
+    
+    
+}
+
 .header-contacts__item:not(:last-child) {
     // Geometry
-    margin-right: 30px;
+    margin-bottom: 10px;
+
+    // Changing geometry by Breakpoint (1200px)
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
+    
 }
 
 .header-contacts__link {
@@ -84,7 +122,6 @@
     transition: color 250ms var(--timing-function);
 }
 
-// Было -> 'contacts-head-text' - стало ->'header-contacts__text'
 .header-contacts__text {
     // Geometry
     display: inline-block;

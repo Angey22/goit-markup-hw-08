@@ -28,7 +28,11 @@
 }
 
 .header__logo {
-
+    // Changing geometri by Breakpoint
+    @media screen and (min-width: $tablet) {
+        margin-right: 88px;
+    }
+    
     // Changing geometri by Breakpoint
     @media screen and (min-width: $desktop) {
         margin-right: 93px;
