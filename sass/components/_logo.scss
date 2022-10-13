@@ -5,6 +5,7 @@
 
     // Text
     font-family: $fontLogo;
+    font-weight: 700;
     font-size: 24px;
     line-height: 1.2;
     color: var(--accent-text-color);
@@ -41,9 +42,6 @@
 }
 
 .footer__logo {
-
-    // Changing geometri by Breakpoint
-    @media screen and (min-width: $desktop) {
-        margin-bottom: 20px;
-    }
+    // Geometry
+    margin-bottom: 20px;
 }

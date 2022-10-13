@@ -102,6 +102,7 @@ body {
 .logo {
   display: block;
   font-family: "Raleway", sans-serif;
+  font-weight: 700;
   font-size: 24px;
   line-height: 1.2;
   color: var(--accent-text-color);
@@ -133,10 +134,8 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .footer__logo {
-    margin-bottom: 20px;
-  }
+.footer__logo {
+  margin-bottom: 20px;
 }
 
 .header {
@@ -674,4 +673,249 @@ body {
 }
 .form__btn:hover, .form__btn:focus {
   background-color: #188ce8;
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--complementary-background-color);
+}
+
+.footer__container {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    text-align: start;
+  }
+}
+
+.footer-contact-block {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer-contact-block {
+    margin-right: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-contact-block {
+    margin-bottom: 0;
+    margin-right: 90px;
+  }
+}
+
+.footer-contacts__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-contacts__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.footer-contacts__link {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--individual-text-color);
+  -webkit-transition: color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
+}
+
+.footer-contacts__link--map {
+  color: var(--complementary-text-color);
+}
+
+.footer-social-block {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-social-block {
+    padding-top: 12px;
+    margin-bottom: 0;
+    margin-right: 93px;
+  }
+}
+
+.social-list-title,
+.subscription-title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--complementary-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-subscription-block {
+    padding-top: 12px;
+  }
+}
+
+.subscription-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .subscription-form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.subscription-input {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+@media screen and (min-width: 480px) {
+  .subscription-input {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscription-input {
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
+    padding: 15px 16px;
+  }
+}
+.subscription-input::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 1, 25;
+  color: rgba(255, 255, 255, 0.6);
+}
+.subscription-input::-moz-placeholder {
+  font-size: 16px;
+  line-height: 1, 25;
+  color: rgba(255, 255, 255, 0.6);
+}
+.subscription-input:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 1, 25;
+  color: rgba(255, 255, 255, 0.6);
+}
+.subscription-input::-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 1, 25;
+  color: rgba(255, 255, 255, 0.6);
+}
+.subscription-input::placeholder {
+  font-size: 16px;
+  line-height: 1, 25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscription-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2196f3;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  -webkit-transition: background-color 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
+}
+.subscription-btn:hover, .subscription-btn:focus {
+  background-color: #188ce8;
+}
+
+.subscription-btn__text {
+  display: block;
+  margin-right: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: var(--complementary-text-color);
+}
+
+.social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.social-list__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-list__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.social-list__link--footer {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--complementary-text-color);
+  -webkit-transition: background-color 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
+}
+.social-list__link--footer:hover, .social-list__link--footer:focus {
+  background-color: var(--accent-text-color);
+}
+
+.social-list__link--team {
+  fill: #afb1b8;
+  -webkit-transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
+}
+.social-list__link--team:hover, .social-list__link--team:focus {
+  background-color: var(--accent-text-color);
+  fill: #fff;
 }/*# sourceMappingURL=main.css.map */
