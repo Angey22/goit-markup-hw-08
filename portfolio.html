@@ -167,33 +167,40 @@
 
     <!-- Main part of the "portfolio.html" page -->
     <main>
+      <!-- Section - "Gallery" -->
       <section>
-        <div class="container">
+        <div class="container gallery__container">
           <h1 class="visually-hidden">Наші роботи</h1>
-          <!-- Этот заголовок спрятан, т.к. его нет в макете -->
+          <!-- This 'section-title' is "hidden" because it's not in the layou -->
 
-          <!-- Gallery button filter -->
-          <ul class="filter-list">
-            <li class="filter-list__item">
-              <button class="filter-list__btn filter-list__btn--broader" type="button">Усі</button>
-            </li>
+          <!-- Gallery button filter block-->
+          <div class="filter">
+            <ul class="filter-list">
+              <li class="filter-list__item">
+                <button class="filter-list__btn filter-list__btn--broader" type="button">
+                  Усі
+                </button>
+              </li>
 
-            <li class="filter-list__item">
-              <button class="filter-list__btn" type="button">Веб-сайти</button>
-            </li>
+              <li class="filter-list__item">
+                <button class="filter-list__btn" type="button">Веб-сайти</button>
+              </li>
 
-            <li class="filter-list__item">
-              <button class="filter-list__btn" type="button">Додатки</button>
-            </li>
+              <li class="filter-list__item">
+                <button class="filter-list__btn" type="button">Додатки</button>
+              </li>
+            </ul>
 
-            <li class="filter-list__item">
-              <button class="filter-list__btn" type="button">Дизайн</button>
-            </li>
+            <ul class="filter-list">
+              <li class="filter-list__item">
+                <button class="filter-list__btn" type="button">Дизайн</button>
+              </li>
 
-            <li class="filter-list__item">
-              <button class="filter-list__btn" type="button">Маркетинг</button>
-            </li>
-          </ul>
+              <li class="filter-list__item">
+                <button class="filter-list__btn" type="button">Маркетинг</button>
+              </li>
+            </ul>
+          </div>
 
           <!-- Card gallery -->
           <ul class="portfolio-list">
