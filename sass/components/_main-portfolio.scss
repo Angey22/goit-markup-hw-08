@@ -84,9 +84,164 @@
         // Button geometry
         padding: 6px 25px;
     }
-
-
 }
+
+// Styles for the "Card gallery"
+// General styles for all portfolio
+.portfolio-list {
+    // Geometry
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--portfolio-card-set-gap);
+    
+    &__item {
+        // Geometry
+        max-width: 450px;
+        width: 100%;
+            
+            // Changing geometry by Breakpoint (768px)
+            @media screen and (min-width: $tablet) {
+                // Geometry
+                max-width: 354px;
+            }
+
+            // Changing geometry by Breakpoint (1200px)
+            @media screen and (min-width: $desktop) {
+                // Geometry
+                max-width: 370px;
+            }
+
+        // Decor
+        box-shadow: none;
+
+        // Animation execution options
+        transition: box-shadow 250ms var(--timing-function);
+
+        // Hover & Focus effects
+        &:hover,
+        &:focus-within {
+            // Decoration effect
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+                1px 4px 6px rgba(0, 0, 0, 0.16);
+
+            // Animation effect
+            .portfolio-card__overlay {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+}
+
+// Portfolio card styles
+.portfolio-card {
+
+    &__tumb {
+        // Position
+        position: relative;
+        overflow: hidden;
+        width: 100%; // !!!
+        background-color: red; // !!!
+    }
+
+    &__overlay {
+        // Position
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        // Geometry
+        padding: 24px 24px;
+        background-color: rgba(33, 150, 243, 0.9);
+
+            // Changing geometry by Breakpoint (480px)
+            @media screen and (min-width: $mobile) {
+                // Geometry
+                padding: 77px 24px;
+            }
+
+            // Changing geometry by Breakpoint (768px)
+            @media screen and (min-width: $tablet) {
+                // Geometry
+                padding: 49px 24px 77px 24px;
+            }
+                
+            // Changing geometry by Breakpoint (1200px)
+            @media screen and (min-width: $desktop) {
+                // Geometry
+                padding: 63px 24px;
+            }
+
+        // Animation settings
+        transform: translateY(100%);
+
+        // Animation execution options
+        transition: transform 250ms var(--timing-function);
+    }
+
+    &__overlay-text {
+        // Text
+        font-size: 16px;
+        line-height: 1.6;
+        color: var(--complementary-text-color);
+
+            // Changing text size by Breakpoint (480px)
+            @media screen and (min-width: $mobile) {
+                // Text
+                font-size: 18px;
+            }
+    }
+
+    &__content {
+        // Geometry
+        padding: 20px 24px;
+
+        // Decor
+        border-right: 1px solid var(--portfolio-card-border-color);
+        border-left: 1px solid var(--portfolio-card-border-color);
+        border-bottom: 1px solid var(--portfolio-card-border-color);
+
+        &--big {
+            // Changing text size by Breakpoint (768px)
+            @media screen and (min-width: $tablet) {
+                // Geometry
+                padding: 20px 24px 56px 24px;
+            }
+
+            // Changing text size by Breakpoint (1200px)
+            @media screen and (min-width: $desktop) {
+                // Geometry
+                padding: 20px 24px;
+            }
+        }
+    }
+
+    &__title {
+        // Geometry
+        margin-bottom: 4px;
+
+        // Text
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+        color: var(--secondary-text-color);
+    }
+
+    &__text {
+        // Text
+        font-size: 16px;
+        line-height: 1.9;
+        color: var(--maine-text-color);
+    }
+}
+
+
 
 
 
