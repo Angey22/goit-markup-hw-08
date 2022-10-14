@@ -790,6 +790,7 @@ body {
 .subscription-input {
   height: 50px;
   width: 100%;
+  padding: 15px 16px;
   margin-bottom: 20px;
   color: rgba(255, 255, 255, 0.6);
   background-color: #2f303a;
@@ -1016,13 +1017,15 @@ body {
 }
 
 .peculiarities__conteainer,
-.team__container {
+.team__container,
+.client__container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .peculiarities__conteainer,
-.team__container {
+.team__container,
+.client__container {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -1177,4 +1180,45 @@ body {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.2;
+}
+
+.client-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+.client-list__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #afb1b8;
+  width: 210px;
+  height: 92px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  fill: currentColor;
+  -webkit-transition: color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
+}
+@media screen and (min-width: 768px) {
+  .client-list__link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client-list__link {
+    width: 170px;
+  }
 }/*# sourceMappingURL=main.css.map */

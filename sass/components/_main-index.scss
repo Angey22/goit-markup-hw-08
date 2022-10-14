@@ -123,7 +123,8 @@
 
 // Styles for the "Peculiarities" section
 .peculiarities__conteainer,
-.team__container {
+.team__container,
+.client__container {
     // Geometry
     padding-top: 60px;
     padding-bottom: 60px;
@@ -316,6 +317,49 @@
         // Text
         font-size: 16px;
         line-height: 1.2;
+    }
+}
+
+// Styles for the "Regular Clients" section
+.client-list {
+    // Geometry
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__link {
+        // Icons location setting
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        // Decor-color general setting
+        color: #afb1b8;
+    
+        // Link geometry
+        width: 210px;
+        height: 92px;
+        border: 1px solid currentColor;
+        border-radius: 4px;
+    
+        // for SVG icon with id: 'icon-client_logo_1'...'icon-client_logo_6'
+        fill: currentColor;
+    
+        // Animation execution options
+        transition: color 250ms var(--timing-function);
+
+            // Changing link geometry by Breakpoint (768px)
+            @media screen and (min-width: $tablet) {
+                // Geometry
+                width: 226px;
+            }
+            
+            // Changing link geometry by Breakpoint (1200px)
+            @media screen and (min-width: $desktop) {
+                // Geometry
+                width: 170px;
+            }
     }
 }
 
