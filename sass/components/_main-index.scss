@@ -56,13 +56,10 @@
                 }
         }
         
-        // Changing geometry & background-image by Breakpoint (1200px)
-        @media screen and (min-width: $desktop) {
+        // Changing geometry & background-image by Breakpoint (769px)
+        @media screen and (min-width: 769px) {
             // Geometry
-            padding-top: 200px;
-            padding-bottom: 200px;
-            max-height: 600px;
-            max-width: 1600px;
+            max-width: $preDesktop;
 
             // Decor
             background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_desk_1600x600_1x.jpg);
@@ -80,6 +77,15 @@
                 (min-resolution: 3dppx) {
                     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_desk_4800x1800_3x.jpg);
                 }
+
+            // Changing geometry Breakpoint (1200px)
+            @media screen and (min-width: $desktop) {
+                // Geometry
+                padding-top: 200px;
+                padding-bottom: 200px;
+                max-height: 600px;
+                max-width: 1600px;
+            }
         }
 }
 
