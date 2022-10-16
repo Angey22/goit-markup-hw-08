@@ -1392,8 +1392,6 @@ body {
 .portfolio-card__tumb {
   position: relative;
   overflow: hidden;
-  width: 100%;
-  background-color: red;
 }
 .portfolio-card__overlay {
   position: absolute;
