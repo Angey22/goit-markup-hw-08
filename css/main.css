@@ -1384,11 +1384,22 @@ body {
 .portfolio-list__item:hover .portfolio-card__overlay, .portfolio-list__item:focus-within .portfolio-card__overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  opacity: 1;
 }
 .portfolio-list__link {
   text-decoration: none;
 }
 
+.portfolio-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
 .portfolio-card__tumb {
   position: relative;
   overflow: hidden;
@@ -1401,12 +1412,13 @@ body {
   height: 100%;
   padding: 24px 24px;
   background-color: rgba(33, 150, 243, 0.9);
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-  -webkit-transition: -webkit-transform 250ms var(--timing-function);
-  transition: -webkit-transform 250ms var(--timing-function);
-  transition: transform 250ms var(--timing-function);
-  transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
+  opacity: 0;
+  -webkit-transition: opacity 750ms var(--timing-function), -webkit-transform 750ms var(--timing-function);
+  transition: opacity 750ms var(--timing-function), -webkit-transform 750ms var(--timing-function);
+  transition: transform 750ms var(--timing-function), opacity 750ms var(--timing-function);
+  transition: transform 750ms var(--timing-function), opacity 750ms var(--timing-function), -webkit-transform 750ms var(--timing-function);
 }
 @media screen and (min-width: 480px) {
   .portfolio-card__overlay {
@@ -1435,6 +1447,9 @@ body {
 }
 .portfolio-card__content {
   padding: 20px 24px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   border-right: 1px solid var(--portfolio-card-border-color);
   border-left: 1px solid var(--portfolio-card-border-color);
   border-bottom: 1px solid var(--portfolio-card-border-color);

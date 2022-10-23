@@ -127,6 +127,7 @@
             // Animation effect
             .portfolio-card__overlay {
                 transform: translateY(0);
+                opacity: 1;
             }
         }
     }
@@ -138,6 +139,9 @@
 
 // Portfolio card styles
 .portfolio-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
     &__tumb {
         // Position
@@ -176,10 +180,11 @@
             }
 
         // Animation settings
-        transform: translateY(100%);
+        transform: translateY(101%);
+        opacity: 0;
 
         // Animation execution options
-        transition: transform 250ms var(--timing-function);
+        transition: transform 750ms var(--timing-function), opacity 750ms var(--timing-function);
     }
 
     &__overlay-text {
@@ -198,6 +203,7 @@
     &__content {
         // Geometry
         padding: 20px 24px;
+        flex-grow: 1;
 
         // Decor
         border-right: 1px solid var(--portfolio-card-border-color);
